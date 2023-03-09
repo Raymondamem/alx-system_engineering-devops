@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | paste -sd ', ' | sed 's/$/\n/'
+ls -ap | tr '\n' ',' | sed 's/,$//' | sed 's/,/, /g' | sed 's/$/\n/'
