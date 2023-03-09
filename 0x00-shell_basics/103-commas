@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1p | grep -v / | sort -k1.1n -k1.1 | sed s/$/,/ && ls -dp .*/ */ | sort -k1.1n -k1.1 | sed s/$/,/ | tr n   && echo
+ls -1pa | grep -v "^\.$" | sort -df | sed ':a;N;$!ba;s/\n/, /g' | sed -e 's/,$/\n/'
