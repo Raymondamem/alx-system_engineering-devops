@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1pa | grep -v "^\.$" | sort -df | sed ':a;N;$!ba;s/\n/, /g' | sed -e 's/,$/\n/'
+ls -ap | paste -sd ', ' | sed 's/$/\n/'
